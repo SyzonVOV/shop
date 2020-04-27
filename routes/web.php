@@ -30,11 +30,15 @@ Route::get('/mobiles/iphone_x_64', function () {
     return view('product');
 });
 */
+
+
 Auth::routes([
     'reset'   => false,
     'confirm' => false,
     'veryfy'  => false,
 ]);
+
+Route::get('/reset', 'ResetController@reset')->name('reset');
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('get-logout');
 
